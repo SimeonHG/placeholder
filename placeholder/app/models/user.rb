@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   extend Devise::Models
-  before_action :authenticate_user!
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
