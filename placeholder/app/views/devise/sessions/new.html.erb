@@ -29,16 +29,15 @@
             <br>
         <br>
         <br>
+        <br>
         <ul style="list-style-type:none;">
             <li class="field">
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
             </li>
             <br>
             <li class="field">
-              <%= f.label :password %><br />
-              <%= f.password_field :password, autocomplete: "current-password" %>
+              <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
             </li>
             <br>
             <div class="row">
