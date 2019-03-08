@@ -1,26 +1,54 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+<html lang="en">
+    <head>
+      <title>Placeholder</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= stylesheet_link_tag "login_css.css", :media => "all" %>
+      <%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
+      <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %>
+      <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' %>
+      <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' %>
+    </head>
+    <body>
+      <div class="bg">
+        <div class="text-center">
+          <div class="typewriter">
+            <br>
+            <h1> Welcome back to Placeholder!</h1>
+        </div>
+          <br>
+          </div>
+          <nav id="navbar" class="nav flex-column">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="web_nachalna.html" class="previous round">&#8249;</a>
+                  </li>
+              </ul>
+            </nav>
+            <br>
+            <br>
+        <br>
+        <br>
+        <ul style="list-style-type:none;">
+            <li class="field">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </li>
+            <br>
+            <li class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password" %>
+            </li>
+            <br>
+            <div class="row">
+              <div class="center-block">
+                  <%= f.submit "Sign in" %>  
+              </div>
+            </div>
+        </ul>
+      </div>
+    </body>
+  </html>
 <% end %>
 
-<%= render "devise/shared/links" %>
