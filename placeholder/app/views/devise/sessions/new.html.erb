@@ -31,18 +31,20 @@
         <br>
         <br>
         <ul style="list-style-type:none;">
-            <li class="field">
+            <li class="field">  
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
             </li>
             <br>
             <li class="field">
-              <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
+              <span class="border"><%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %></span>
             </li>
             <br>
             <div class="row">
-              <div class="center-block">
-                  <%= f.submit "Sign in" %>  
+             <div class="center-block">
+                <div class="actions">
+                <%= f.submit "Sign up" %>
+                </div>              
               </div>
             </div>
         </ul>

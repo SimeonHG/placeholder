@@ -31,6 +31,7 @@ a:hover{
 .bg {
   	background-image: url("main2.png");
   	height: 100%; 
+    width: 100%;
   	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover;
@@ -46,20 +47,13 @@ li{
   font-family: "Bender";
   margin:0px auto 0px auto;
   text-align: center;
-  border: 5px solid  black;
-  border-radius: 8px;
   color: white;
   width: 14.4%;
 }
 
-#strelka{
-  font-family: "Bender";
-  margin:0px auto 0px auto;
-  text-align: center;
+li input {
   border: 5px solid  black;
   border-radius: 8px;
-  color: white;
-  width: 30%;
 }
 
 .center-block{
