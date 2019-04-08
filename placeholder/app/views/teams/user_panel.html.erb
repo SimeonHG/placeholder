@@ -42,21 +42,18 @@
                 <ol type="1" >
                     <h1>Projects list:</h1>
                     <br>
-                    
                     <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#project">Create project</button>
                     <div id="project" class="modal fade" role="dialog">
                       <div class="modal-dialog modal-lg">
                        <div class="modal-content">
                           <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">New Project</h4>
+                            <h4 class="modal-title center-block">New Project</h4>
                           </div>
                           <div class="modal-body">
-                            <%= render 'form', project: @project%>
-                            <%= link_to 'Back', projects_path %>
+                            <%= render 'projects/form', project: @project%>  
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <%= link_to 'Back', projects_path %>
                           </div>
                         </div>
                       </div>
@@ -72,15 +69,13 @@
                       <div class="modal-dialog modal-lg">
                        <div class="modal-content">
                           <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">New Team</h4>
+                            <h4 class="modal-title center-block">New Team</h4>
                           </div>
                           <div class="modal-body">
                             <%= render 'teams/form', team: @team%>
-                            <%= link_to 'Back', teams_path %>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <%= link_to 'Back', teams_path %>
                           </div>
                         </div>
                       </div>

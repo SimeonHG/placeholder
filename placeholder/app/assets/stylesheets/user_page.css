@@ -43,6 +43,15 @@ body, html {
     color: #A66500;
   }
 
+  .modal-footer{
+    font-size: 20px;
+  }
+
+  .modal-title{
+    color: #A66500;
+    font-size: 40px;
+  }
+
 }
 /* tablet */
 @media (min-width: 750px) and (max-width: 970px) 
