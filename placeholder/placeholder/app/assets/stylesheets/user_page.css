@@ -1,0 +1,122 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+/* PC */
+@media (min-width: 971px) and (max-width: 1920px) 
+ { 
+  .bg {
+    background-image: url("background1.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ .text-center{
+    color: #E6E3DD;
+    font-family: "Bender";
+    /*font-size: 100px;*/
+  }
+  .card{
+    margin-left: 50px;
+    font-family: "Bender";
+    font-size: 50px;
+    color: #A66500;
+  }
+  ol{
+    font-family: "Bender";
+    font-size: 50px;
+    color: #E6E3DD;
+  }
+  .center-block{
+      margin: auto;
+      font-family: "Bender";
+  }
+
+  .navbar-brand{
+    color: #E6E3DD;
+    font-family: "Bender";
+  }
+  .modal-body{
+    color: #A66500;
+  }
+
+}
+/* tablet */
+@media (min-width: 750px) and (max-width: 970px) 
+ { 
+  .bg {
+    background-image: url("background1.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-center{
+    color: #E6E3DD;
+    font-family: "Bender";
+    font-size: 100px;
+  }
+  .card{
+    font-family: "Bender";
+    font-size: 50px;
+    color: #A66500;
+  }
+  ol{
+    font-family: "Bender";
+    font-size: 50px;
+    color: #E6E3DD;
+  }
+  .center-block{
+      margin: auto;
+      font-family: "Bender";
+  }
+
+  .navbar-brand{
+    color: #E6E3DD;
+    font-family: "Bender";
+  }
+  .modal-body{
+    color: #A66500;
+  }
+}
+@media (min-width: 0px) and (max-width: 750px) 
+ { 
+  .bg {
+    background-image: url("background1.png");
+    height: 200%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-center{
+    color: #E6E3DD;
+    font-family: "Bender";
+    font-size: 100px;
+  }
+  .card{
+    font-family: "Bender";
+    font-size: 50px;
+    color: #A66500;
+  }
+  ol{
+    font-family: "Bender";
+    font-size: 50px;
+    color: #E6E3DD;
+  }
+  .center-block{
+      margin: auto;
+      font-family: "Bender";
+  }
+  .navbar-brand{
+    color: #E6E3DD;
+    font-family: "Bender";
+  }
+  .modal-body{
+    color: #A66500;
+  }
+}

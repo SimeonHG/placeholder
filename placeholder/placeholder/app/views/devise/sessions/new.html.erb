@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+      <title>Placeholder</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= stylesheet_link_tag "login_css.css", :media => "all" %>
+      <%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
+      <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %>
+      <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' %>
+      <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' %>
+    </head>
+    <body>
+      <div class="bg">
+        <div class="text-center">
+          <div class="typewriter">
+            <br>
+            <h1> Welcome back to Placeholder!</h1>
+        </div>
+          <br>
+          </div>
+          <nav id="navbar" class="nav flex-column">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="/" class="previous round">&#8249;</a>
+                  </li>
+              </ul>
+            </nav>
+            <br>
+            <br>
+        <br>
+        <br>
+        <br>
+        <ul style="list-style-type:none;">
+            <li class="field">  
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+            </li>
+            <br>
+            <li class="field">
+              <span class="border"><%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %></span>
+            </li>
+            <br>
+            <div class="row">
+            <div class="center-block">
+              <%= f.submit "Sign up" %>            
+            </div>
+        </ul>
+      </div>
+    </body>
+  </html>
+<% end %>
+

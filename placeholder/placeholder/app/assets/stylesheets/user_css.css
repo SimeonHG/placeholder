@@ -1,0 +1,77 @@
+body, html {
+  		height: 100%;
+  		margin: 0;
+}
+.bg {
+  background-image: url("main2.png");
+  height: 100%;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-center{
+  color: #E6E3DD;
+  font-family: "Bender";
+  font-size: 50px;
+}
+a:hover{
+	background-color: #ddd;
+	color: #E6E3DD;
+}
+
+.round {
+  border-radius: 50%;
+}
+.previous{
+	display: inline-block;
+	padding: 8px 16px;
+	color:#A66500;
+}
+nav{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  border-color: black;
+  padding: 0px 60px
+}
+ul{
+  font-family: "Bender";
+  margin:0px auto 0px auto;
+  text-align: center;
+  color: white;
+  width: 20%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: #F9A625;;
+}
+/*
+.float-left{
+	margin-left: 200px;
+}
+*/
+.list-group-item{
+	font-family: "Bender";
+	max-width: 300px;
+}
+h1{
+	font-family: "Bender";
+}
+.list-group{
+	padding-right: 300px;
+}
+ol{
+  	color: #F9A625;	
+}
+nav{
+  height: 100%;
+}
+
