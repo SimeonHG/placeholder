@@ -39,6 +39,9 @@ body, html {
     color: #E6E3DD;
     font-family: "Bender";
   }
+  .modal-body{
+    color: #A66500;
+  }
 
 }
 /* tablet */
@@ -76,6 +79,9 @@ body, html {
     color: #E6E3DD;
     font-family: "Bender";
   }
+  .modal-body{
+    color: #A66500;
+  }
 }
 @media (min-width: 0px) and (max-width: 750px) 
  { 
@@ -109,5 +115,8 @@ body, html {
   .navbar-brand{
     color: #E6E3DD;
     font-family: "Bender";
+  }
+  .modal-body{
+    color: #A66500;
   }
 }

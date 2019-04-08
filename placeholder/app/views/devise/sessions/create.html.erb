@@ -42,14 +42,31 @@
                 <ol type="1" >
                     <h1>Projects list:</h1>
                     <br>
-                    <button type="button" class="btn btn-dark">Create project</button>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#project">Create project</button>
+                    <div id="project" class="modal fade" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">New Project</h4>
+                          </div>
+                          <div class="modal-body">
+                            <%= render 'projects/form', project: @project%>
+                            <%= link_to 'Back', projects_path %>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
                 </ol>
               </div>
             <div class="col-md-4">
               <ol type="1">
                   <h1>Team list:</h1>
                   <br>
-                  <button type="button" class="btn btn-dark">Create team</button>
+                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#team">Create Team</button>
               </ol>
             </div>
           </div>
