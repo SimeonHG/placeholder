@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def user_panel
+  def user_project  
     @project = Project.new
   end
 

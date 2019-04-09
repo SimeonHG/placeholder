@@ -3,8 +3,12 @@ class MainPageController < ApplicationController
 
 	end
 
-	def user_panel
+	def user_project
 		@project = Project.new
+		
+	end
+
+	def user_team
 		@team = Team.new
 	end
 end

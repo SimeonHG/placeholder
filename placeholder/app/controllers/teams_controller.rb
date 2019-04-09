@@ -61,7 +61,7 @@ class TeamsController < ApplicationController
     end
   end
 
-  def user_panel
+  def user_team
     @team = Team.new
   end
 
