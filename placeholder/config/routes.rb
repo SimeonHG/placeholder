@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-	get "users/panel", to: "projects#user_project"
-	post "users/panel", to: "teams#user_team"
+	get "users/panel", to: "projects#user_project_team"
+  #get "users/panel", to: "main_page#user_projects_list"
+	post "users/panel", to: "teams#create"
+  post "users/panel", to: "projects#create"
   	resources :teams
 		devise_for :users
 	# devise_for :users, :controllers => { registrations: 'registrations' }

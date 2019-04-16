@@ -24,11 +24,17 @@ class ProjectsController < ApplicationController
   def edit
   end
 
+  def user_projects_list
+    
+  end
+
   # POST /projects
   # POST /projects.json
   def create
+    #p project_params
     @project = Project.new(project_params)
-
+    @project.user = current_user
+    @project.save
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -64,8 +70,12 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def user_project  
+  def user_project_team 
     @project = Project.new
+    @team = Team.new
+    @projects = current_user.projects
+    @teams = current_user.teams
+    #p @projects
   end
 
   private
