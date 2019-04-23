@@ -13,8 +13,13 @@ nav{
   padding: 0px 60px
 }
 
+.jumbotron{
+  color: rgba(0, 0, 0, 1);
+  opacity: 0.8;
+}
+
 .bg {
-  background-image: url("main2.png");
+  background-image: url("main.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -50,5 +55,135 @@ li{
 
 .title{
   font-size: 30px;
-  color: #A66500;
+  color: black;
 }
+
+@media (min-width: 971px) and (max-width: 1920px) {
+  .cards{
+  margin-left: 320px;
+  margin-right: 320px;
+}
+  .card{
+  background-color: rgb(255,255,255,0.6);
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 350px;
+  height: 80px;
+  text-align: center;
+  font-size: 40px;
+}
+
+  #card1:hover {
+    border-color: black;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+  }
+
+  #card2:hover {
+    border-color: black;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+  }
+  #card3:hover {
+    border-color: black;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+  }
+  #text1{
+    display: none;
+  }
+  #text2{
+    display: none;
+  }
+  #text3{
+    display: none;
+  }
+  #card1:hover #text1 {
+    display:block;
+    font-size: 30px;
+    color: #A66500;
+    text-align: center;
+  }
+
+  #card2:hover #text2{
+    display:block;
+     font-size: 30px;
+     color: #A66500;
+    text-align: center;
+  }
+  #card3:hover #text3{
+    display:block;
+     font-size: 30px;
+     color: #A66500;
+    text-align: center;
+  }  
+}
+
+@media (min-width: 750px) and (max-width: 970px) {
+  .cards{
+  margin-left: 60px;
+  margin-right: 60px;
+}
+  .card{
+  background-color: rgb(255,255,255,0.4);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 800px;
+  height: 70px;
+  text-align: center;
+  font-size: 30px;
+}
+
+  #card1:hover {
+    border-color: black;
+    width: 800px;
+    height: 80px;
+    text-align: center;
+  }
+
+  #card2:hover {
+    border-color: black;
+    width: 800px;
+    height: 80px;
+    text-align: center;
+  }
+  #card3:hover {
+    border-color: black;
+    width: 800px;
+    height: 80px;
+    text-align: center;
+  }
+  #text1{
+    display: none;
+  }
+  #text2{
+    display: none;
+  }
+  #text3{
+    display: none;
+  }
+  #card1:hover #text1 {
+    display:block;
+    font-size: 20px;
+     color: #A66500;    
+    text-align: center;
+  }
+
+  #card2:hover #text2{
+    display:block;
+    font-size: 20px;
+    color: #A66500;
+    text-align: center;
+  }
+  #card3:hover #text3{
+    display:block;
+    font-size: 20px;
+    color: #A66500;
+    text-align: center;
+  } 
+}
+
+
