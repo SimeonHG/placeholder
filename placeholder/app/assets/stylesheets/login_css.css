@@ -1,6 +1,21 @@
 body, html {
-  		height: 100%;
-  		margin: 0;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  padding: 60px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Bender";
 }
 
 nav{
@@ -8,20 +23,20 @@ nav{
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: black;
+  background-color: #a6a6a6;
   border-color: black;
   padding: 0px 60px
 }
 
 .previous{
-	display: inline-block;
-		padding: 8px 16px;
-		color:#A66500;
+  display: inline-block;
+    padding: 8px 16px;
+    color:#A66500;
 }
 
 a:hover{
-	background-color: #ddd;
-		color: black;
+  background-color: #ddd;
+    color: black;
 }
 
 .round {
@@ -29,12 +44,13 @@ a:hover{
 }
 
 .bg {
-  	background-image: url("main2.png");
-  	height: 100%; 
+    /*background-image: url("main2.png");*/
+    background-color: white;
+    height: 100%; 
     width: 100%;
-  	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .text-center{
@@ -62,10 +78,11 @@ li input {
 }
 
 .typewriter h1 {
-  color: #E6E3DD;
+  font-size: 60px;
+  color: white;
   font-family: "Bender";
   overflow: hidden;
-  border-right: .15em solid white;
+  border-right: .15em solid black;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
@@ -80,6 +97,6 @@ li input {
 }
 
 @keyframes blink-caret {
-  from, to { border-color: #F9A625}
-  45% { border-color: #F9A625 }
+  from, to { border-color: black}
+  45% { border-color: black }
 }

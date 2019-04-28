@@ -3,14 +3,17 @@ body, html {
     margin: 0;
   }
 
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Bender";
+}
+
 nav{
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
   background-color: black;
   border-color: black;
-  padding: 0px 60px
 }
 
 .jumbotron{
@@ -32,16 +35,6 @@ nav{
   font-size: 100px;
 }
 
-li{
-  font-family: "Bender";
-  margin:0px auto 0px auto;
-  text-align: center;
-  border: 5px solid black;
-  border-radius: 8px;
-  color: #F9A625;
-  width: 50%;
-}
-
 .center-block{
     margin: auto;
     font-family: "Bender";
@@ -59,37 +52,34 @@ li{
 }
 
 @media (min-width: 971px) and (max-width: 1920px) {
-  .cards{
-  margin-left: 320px;
-  margin-right: 320px;
-}
   .card{
   background-color: rgb(255,255,255,0.6);
   border-radius: 5px;
-  margin-right: 10px;
-  width: 350px;
+  margin-right: 5px;
+  width: 320px;
   height: 80px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
+  font-family: "Bender";
 }
 
   #card1:hover {
     border-color: black;
     width: 450px;
-    height: 200px;
+    height: 150px;
     text-align: center;
   }
 
   #card2:hover {
     border-color: black;
     width: 450px;
-    height: 200px;
+    height: 150px;
     text-align: center;
   }
   #card3:hover {
     border-color: black;
     width: 450px;
-    height: 200px;
+    height: 150px;
     text-align: center;
   }
   #text1{
@@ -103,30 +93,26 @@ li{
   }
   #card1:hover #text1 {
     display:block;
-    font-size: 30px;
+    font-size: 20px;
     color: #A66500;
     text-align: center;
   }
 
   #card2:hover #text2{
     display:block;
-     font-size: 30px;
+     font-size: 20px;
      color: #A66500;
     text-align: center;
   }
   #card3:hover #text3{
     display:block;
-     font-size: 30px;
+     font-size: 20px;
      color: #A66500;
     text-align: center;
   }  
 }
 
 @media (min-width: 750px) and (max-width: 970px) {
-  .cards{
-  margin-left: 60px;
-  margin-right: 60px;
-}
   .card{
   background-color: rgb(255,255,255,0.4);
   border-radius: 5px;
