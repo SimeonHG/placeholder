@@ -1,5 +1,38 @@
-<ol>
-<% @projects.each do |project| %>
-  	<li><%= project.title %></li>
-<%end%>
-</ol>
+<style>
+	table, tr, th{
+	  	border: 2px solid white;
+	  	border-collapse: collapse;
+	  	color: white;
+	}
+	tr, th{
+	  padding: 5px;
+	  text-align: left;
+	  font-family: "Bender";
+	  font-size: 25px;
+	}
+  h2{
+    color: white;
+    font-family: "Bender";
+    font-size: 40px;
+  }
+</style>
+
+<div class="container">
+  <h2>Projects:</h2>
+  <table class="table table-hover table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th>Title</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><a href = "/projects/<%= project.id %>"><%= project.title %></a></td>
+          <td><%= project.team_id%></td>
+        </tr>
+      <%end%> 
+    </tbody>
+  </table>
+</div>

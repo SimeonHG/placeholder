@@ -10,6 +10,9 @@ class TasksController < ApplicationController
   		@tast = Task.find(parans[:id])
 
 	def create
+		@project = Project.new(project)
+	    @project.tasks << current_task 
+	    @project.save
 		@task = @project.tasks.create(task_params)
 		redirect_to @project
 	end

@@ -8,27 +8,33 @@ body, html {
 @media (min-width: 971px) and (max-width: 1920px) 
  { 
   .bg {
-    background-image: url("background1.png");
+    background-color: black;
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .sidebar{
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+  }
  .text-center{
     color: #E6E3DD;
     font-family: "Bender";
-    /*font-size: 100px;*/
   }
-  .card{
-    margin-left: 50px;
+  .btn{
     font-family: "Bender";
-    font-size: 50px;
-    color: #A66500;
+    font-size: 20px;
+
   }
-  ol{
-    font-family: "Bender";
-    font-size: 50px;
-    color: #E6E3DD;
+  article {
+    float: right;
+    width: 85%;
   }
   .center-block{
       margin: auto;
@@ -57,11 +63,20 @@ body, html {
 @media (min-width: 750px) and (max-width: 970px) 
  { 
   .bg {
-    background-image: url("background1.png");
+    background-color: black;
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .sidebar{
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
   }
 
   .text-center{
@@ -95,11 +110,20 @@ body, html {
 @media (min-width: 0px) and (max-width: 750px) 
  { 
   .bg {
-    background-image: url("background1.png");
-    height: 200%; 
+    background-color: black;
+    height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .sidebar{
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
   }
 
   .text-center{
