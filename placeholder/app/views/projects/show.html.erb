@@ -1,22 +1,97 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<div id="task_wrapper">
- 	<% @tasks.each do |task| %>
- 		<p>asdadsasdsadadad</p>
-  		<p><%= task.name %></p>
- 	<%end%>
- 
-</div>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<head>
+	<style>
+		#title{
+			font-family: "Bender";
+	    	font-size: 50px;
+		}
+		#description{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		#members{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		h2{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		.modal-title{
+		    color: black;
+		    font-size: 40px;
+		    font-family: "Bender";
+	  	}
+	  	.modal-body{
+	  		color: black;
+		    font-size: 30px;
+		    font-family: "Bender";
+	  	}
+	  	button{
+		    font-family: "Bender";
+	  	}
+	  	footer {
+		  background-color: black;
+		  padding: 10px;
+		  text-align: center;
+		  color: white;
+		  font-family: "Bender";
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id="title" class="col text-center"><strong>Project:</strong> <%= @project.title %></div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div id="description" class="col-lg text-center">
+				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#dsc">
+					Project description
+				</button>
+				<div id="dsc" class="collapse">
+				    <%= @project.description %>
+				</div>
+			</div>
+			<div id="members" class="col-lg text-center">
+				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#users">
+					Project members
+				</button>
+				<div id="users" class="collapse">
+				    tuk sa member-ite
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<h2>Tasks to do:</h2>
+			<table class="table table-hover table-dark">
+				<tbody>
+					<% @tasks.each do |task| %>
+					<tr>
+					<td><%= task.name %></td>
+					</tr>
+					<%end%> 
+				</tbody>
+			</table>
+			<button  type="button" class="btn btn-light" data-toggle="modal" data-target="#task">Create task</button>
+			<div id="task" class="modal fade" role="dialog">
+	          <div class="modal-dialog modal-lg">
+	           <div class="modal-content">
+	              <div class="modal-header">
+	                <h4 class="modal-title">New Task</h4>
+	              </div>
+	              <div class="modal-body">
+	                <%= render 'tasks/form', project: @project%>  
+	              </div>
+	            </div>
+	          </div>
+	        </div> 
+		</div>
+	</div>
+	<button class="btn btn-dark"><a href="/users/panel">Back</a></button>
+</body>

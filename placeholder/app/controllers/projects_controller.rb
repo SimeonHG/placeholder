@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
-    @tasks = Task.all
+    @tasks = @project.tasks
   end
 
   # GET /projects/new

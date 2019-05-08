@@ -3,31 +3,29 @@ class TasksController < ApplicationController
 	before_action :set_project
 
 	def index
-    	@tasks = Task.all
+    	@tasks = @project.tasks
   	end
 
   	def show
-  		@tast = Task.find(parans[:id])
+  		@task = Task.find(params[:id])
+  	end
 
 	def create
-		@project = Project.new(project)
-	    @project.tasks << current_task 
-	    @project.save
+		@task = Task.new(:project_id => params[:project_id])
 		@task = @project.tasks.create(task_params)
 		redirect_to @project
+		@project.tasks << @task
 	end
-
-
 
 	private
 
-	def set_project
-		@project = Project.find(params[:project_id])
-	end
+		def set_project
+			@project = Project.find(params[:project_id])
 
-	def task_params
-		params[:task].permit(:name)
-	end
+		end
 
-
+		def task_params
+			params[:task].permit(:name)
+		end
+	
 end
