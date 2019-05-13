@@ -17,6 +17,10 @@ class TasksController < ApplicationController
 		@project.tasks << @task
 	end
 
+	def edit
+
+	end
+	
 	private
 
 		def set_project
@@ -25,7 +29,7 @@ class TasksController < ApplicationController
 		end
 
 		def task_params
-			params[:task].permit(:name)
+			params[:task].permit(:name, :description, :priority, :state, :deadline)
 		end
 	
 end

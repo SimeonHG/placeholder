@@ -10,6 +10,9 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
+    @users=User.all
+    @users_team = @team.users
+    @to_add = @users - @users_team 
   end
 
   # GET /teams/new

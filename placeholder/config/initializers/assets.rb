@@ -7,6 +7,7 @@ Rails.application.config.assets.precompile += %w( nachalna_css.css )
 Rails.application.config.assets.precompile += %w( signup_css.css )
 Rails.application.config.assets.precompile += %w( user_page.css )
 
+
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.

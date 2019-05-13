@@ -1,0 +1,42 @@
+.bg{
+			background-image: url("bg.jpg");
+			height: 100%; 
+		    background-position: center;
+		    background-repeat: no-repeat;
+		}
+		#title{
+			font-family: "Bender";
+	    	font-size: 50px;
+		}
+		#description{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		#members{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		h2{
+			font-family: "Bender";
+	    	font-size: 35px;
+		}
+		.modal-title{
+		    color: black;
+		    font-size: 40px;
+		    font-family: "Bender";
+	  	}
+	  	.modal-body{
+	  		color: black;
+		    font-size: 30px;
+		    font-family: "Bender";
+	  	}
+	  	button{
+		    font-family: "Bender";
+	  	}
+	  	footer {
+		  background-color: black;
+		  padding: 10px;
+		  text-align: center;
+		  color: white;
+		  font-family: "Bender";
+		}

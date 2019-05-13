@@ -1,5 +1,14 @@
 <%= form_for([@project, @project.tasks.build]) do |f| %>
   <%= f.text_field :name, placeholder: "New Todo" %>
+  </br>
+  <%= f.text_field :description, placeholder: "Description" %>
+  </br>
+  <%= f.select :state, ['ToDo'], placeholder: "Task State" %>
+  </br>
+  <%= f.select :priority, ['Urgent', 'Not urgent', 'Kinda :)'], placeholder: "Task Priority" %>
+  </br>
+  <%= f.datetime_select :deadline, placeholder: "Task Deadline" %>
+  </br>
   <%= f.submit %>
 <% end %>
 
