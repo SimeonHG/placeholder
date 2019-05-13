@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 		devise_for :users
 	# devise_for :users, :controllers => { registrations: 'registrations' }
   resources :projects do
-  	resources :tasks
+  	resources :tasks 
   end
+  patch 'teams/:id/kick', to: 'teams#kick', as: 'kick_user'
+  
   get '/', to: 'main_page#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

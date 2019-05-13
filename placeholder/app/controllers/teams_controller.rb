@@ -15,6 +15,11 @@ class TeamsController < ApplicationController
     @to_add = @users - @users_team 
   end
 
+  def add
+    @user = User.find params[:id]
+    @team.update_attribute(:user_id, @user.id)
+  end
+
   # GET /teams/new
   def new
     @team = Team.new
@@ -45,17 +50,20 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1
   # PATCH/PUT /teams/1.json
   def update
-    respond_to do |format|
-      if @team.update(team_params)
-        format.html { redirect_to @team, notice: 'Team was successfully updated.' }
-        format.json { render :show, status: :ok, location: @team }
-      else
-        format.html { render :edit }
-        format.json { render json: @team.errors, status: :unprocessable_entity }
-      end
-    end
+    @team = Team.find(params[:id])
+    @user = User.find(params[:user_id])
+    # to be fixed
+    @team.users << @user
+    redirect_to team_path
   end
 
+  def kick
+    @team = Team.find(params[:id])
+    @user = User.find(params[:user_id])
+    @team.users.delete(@user)
+    redirect_to team_path
+  end
+  
   # DELETE /teams/1
   # DELETE /teams/1.json
   def destroy

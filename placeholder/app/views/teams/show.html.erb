@@ -62,6 +62,7 @@
 							<% @users_team.each do |user| %>
 								<tr>
 									<td ><%= user.email %></td>
+									<td ><%= link_to "Kick from team", kick_user_path(:team_id => @team.id, :user_id => user.id), :method => :patch %></td>
 								</tr>
 							<%end%> 
 						</tbody>
@@ -74,6 +75,7 @@
 							<% @to_add.each do |user| %>
 								<tr>
 									<td ><%= user.email %></td>
+									<td ><%= link_to "Add to team", team_path(:team_id => @team.id, :user_id => user.id, :action => 1), :method => :put %></td>
 								</tr>
 							<%end%> 
 						</tbody>
