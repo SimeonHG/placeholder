@@ -10,24 +10,34 @@
       <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" %>
     </head>
     <body>
-      <div class="bg">
-        <aside>
-           <span class="sidebar">
-          <a class="navbar-brand"><h3>Placeholder</h3></a>
+      <div>
+           <ul class="nav navbar-dark bg-dark">
+            <li class="nav-item">
+              <a class="navbar-brand"><h3>Placeholder</h3></a>
+            </li>
           <br>
           <br>
-            <button  type="button" class="btn btn-light" data-toggle="modal" data-target="#project">Create project</button>
-            <button  type="button" class="btn btn-light" data-toggle="modal" data-target="#team">Create Team</button>
+          <li class="nav-item">
+            <button  type="button" class="btn btn-dark" data-toggle="modal" data-target="#project">Create project</button>
+          </li>
+          <li class="nav-item">
+            <button  type="button" class="btn btn-dark" data-toggle="modal" data-target="#team">Create Team</button>
+          </li>
             <br>
-            <button type="button" class="btn btn-light"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
-          </span>
-        </aside>
-        <article>
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
+          </li>
+          </ul>
           <div>
-              <div class="text-center">
+            <div class="hero-image">
+                <div class="text-center">
+                  <br>
+                  <h1>Hello there, <%= current_user.email %>!</h1>
+                </div>
                 <br>
-                <h1>Hello there, <%= current_user.email %>!</h1>
-              </div>
+                <br>
+                <br>
+            </div>
             <br>
             <br>
             <br>
@@ -44,9 +54,6 @@
                   <div class="modal-body">
                     <%= render 'projects/form', project: @project%>  
                   </div>
-                  <div class="modal-footer">
-                    <%= link_to 'Back', projects_path %>
-                  </div>
                 </div>
               </div>
             </div>   
@@ -61,15 +68,10 @@
                   <div class="modal-body">
                     <%= render 'teams/form', team: @team%>
                   </div>
-                  <div class="modal-footer">
-
-                    <%= link_to 'Back', teams_path %>
-                  </div>
                 </div>
               </div>
             </div> 
           </div>
-        </article>
       </div>
     </body>
 </html>

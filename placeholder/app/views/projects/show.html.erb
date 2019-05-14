@@ -1,5 +1,10 @@
 <head>
 	<style>
+		.bg{
+		    height: 100%;
+		    width: 100%;
+		    margin: 0;
+		}
 		#title{
 			font-family: "Bender";
 	    	font-size: 50px;
@@ -30,11 +35,11 @@
 		    font-family: "Bender";
 	  	}
 	  	footer {
-		  background-color: black;
-		  padding: 10px;
-		  text-align: center;
-		  color: white;
-		  font-family: "Bender";
+			background-color: black;
+			padding: 10px;
+			text-align: center;
+			color: white;
+			font-family: "Bender";
 		}
 	</style>
 </head>
@@ -67,115 +72,73 @@
 		</div>
 		<br>
 		<br>
-	</header>
-	<article>	
-		<div class="container">
-			<br>
-			<br>
-			<br>
-			<br>
-			<div class="row">
-				<div class="column">
-					<h2>Tasks to do:</h2>
-					<table class="table table-hover table-dark">
-						<tbody>
-							<% @tasks.each do |task| %>
-								<tr>
-									<td ><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
-									<!--
-									<div id="info" class="modal">
-										<div class="modal-dialog">
-							       			<div class="modal-content">
-							       				<div class="modal-header">
-								                	<strong><h2>Task info</h2></strong>
-								                </div>
-								         		<div class="modal-body">
-								         			<strong>Description: </strong>
-								         				<%= task.description %><br>
-								         			<strong>State: </strong>
-								         				<%= task.state %><br>
-								         			<strong>Priority: </strong>
-								         				<%= task.priority %><br>
-								         			<strong>Deadline: </strong>
-								         				<%= task.deadline %><br>
-								         		</div>
-								            </div>
-							           	</div>
-							        </div> 
-							    -->
-								</tr>
-							<%end%> 
-						</tbody>
-					</table>
-				<button  type="button" class="btn btn-light" data-toggle="modal" data-target="#task">Create task</button>
-				<div id="task" class="modal fade" role="dialog">
-		          <div class="modal-dialog modal-lg">
-		           <div class="modal-content">
-		              <div class="modal-header">
-		                <h4 class="modal-title">New Task</h4>
-		              </div>
-		              <div class="modal-body">
-		                <%= render 'tasks/form', project: @project%>  
-		              </div>
-		            </div>
-		          </div>
-		        </div> 
+	</header>	
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="column">
+				<h2>Tasks to do:</h2>
+				<table class="table table-hover table-dark">
+					<tbody>
+						<% @tasks.each do |task| %>
+							<tr>
+								<td ><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
+								<div id="info" class="modal">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+						       				<div class="modal-header">
+							                	<strong><h2>Task info</h2></strong>
+							                </div>
+							         		<div class="modal-body">
+							         			<strong>Description: </strong>
+							         				<%= task.description %><br>
+							         			<strong>State: </strong>
+							         				<%= task.state %><br>
+							         			<strong>Priority: </strong>
+							         				<%= task.priority %><br>
+							         			<strong>Deadline: </strong>
+							         				<%= task.deadline %><br>
+							         		</div>
+							            </div>
+						           	</div>
+						        </div> 
+							</tr>
+						<%end%> 
+					</tbody>
+				</table>
+			<button  type="button" class="btn btn-light" data-toggle="modal" data-target="#task">Create task</button>
+			<div id="task" class="modal fade" role="dialog">
+	          <div class="modal-dialog modal-lg">
+	           <div class="modal-content">
+	              <div class="modal-header">
+	                <h4 class="modal-title">New Task</h4>
+	              </div>
+	              <div class="modal-body">
+	                <%= render 'tasks/form', project: @project%>  
+	              </div>
+	            </div>
+	          </div>
+	        </div> 
+		</div>
+			<div style="padding-left:100px" class="column">
+				<h2>Tasks in progress:</h2>
+				<table class="table table-hover table-dark">
+					<tbody>
+					</tbody>
+				</table>
 			</div>
-				<div style="padding-left:100px" class="column">
-					<h2>Tasks in progress:</h2>
-					<table class="table table-hover table-dark">
-						<tbody>
-							<% @tasks.each do |task| %>
-								<tr>
-									<td ><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#edit"><%= task.name %></button></td>
-									<div id="edit" class="modal fade" role="dialog">
-							          <div class="modal-dialog modal-lg">
-							           <div class="modal-content">
-							              <div class="modal-header">
-							                <h4 class="modal-title">Task info</h4>
-							              </div>
-							              <div class="modal-body">
-							                <%= task.priority %>
-							                <%= task.deadline %>
-							              </div>
-							            </div>
-							          </div>
-							        </div> 
-								</tr>
-							<%end%> 
-						</tbody>
-					</table>
-				</div>
-				<div style="padding-left:100px" class="column">
-					<h2>Finished tasks:</h2>
-					<table class="table table-hover table-dark">
-						<tbody>
-							<% @tasks.each do |task| %>
-								<tr>
-									<td ><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#edit"><%= task.name %></button></td>
-									<div id="edit" class="modal fade" role="dialog">
-							          <div class="modal-dialog modal-lg">
-							           <div class="modal-content">
-							              <div class="modal-header">
-							                <h4 class="modal-title">Task info</h4>
-							              </div>
-							              <div class="modal-body">
-							                <%= task.priority %>
-							                <%= task.deadline %>
-							              </div>
-							            </div>
-							          </div>
-							        </div> 
-								</tr>
-							<%end%> 
-						</tbody>
-					</table>
-				</div>
+			<div style="padding-left:100px" class="column">
+				<h2>Finished tasks:</h2>
+				<table class="table table-hover table-dark">
+					<tbody>
+
+					</tbody>
+				</table>
 			</div>
 		</div>
-	</article>
+	</div>
 	<button class="btn btn-dark"><a href="/users/panel">Back</a></button>
-	 <footer>
-      <p>© 2019 Simko&Ellie All Rights Reserved</p>
-    </footer>
 </body>

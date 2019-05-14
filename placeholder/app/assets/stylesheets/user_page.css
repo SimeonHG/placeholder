@@ -1,4 +1,5 @@
 body, html {
+  background-color: black;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -7,12 +8,13 @@ body, html {
 /* PC */
 @media (min-width: 971px) and (max-width: 1920px) 
  { 
-  .bg {
-    background-color: black;
-    height: 100%; 
+  .hero-image{
+    background-image: url("main.jpg");
+    height: 70%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
   }
   footer {
       background-color: black;
@@ -31,8 +33,13 @@ body, html {
     position: fixed;
   }
  .text-center{
-    color: #E6E3DD;
+    color: black;
     font-family: "Bender";
+    font-size: 70px;
+  }
+  h1{
+        font-size: 70px;
+
   }
   .btn{
     font-family: "Bender";
@@ -54,6 +61,7 @@ body, html {
   }
   .modal-body{
     color: #A66500;
+    font-size: 30px;
   }
 
   .modal-footer{
