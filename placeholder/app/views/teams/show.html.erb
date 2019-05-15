@@ -45,6 +45,7 @@
 </head>
 <body class="bg">
 	<header style="background-color: black">
+		<a href="/users/panel" class="previous round">&#8249;</a>
 		<div class="row">
 			<div style="color: #c4b28f" id="title" class="col text-center">
 				<strong >Team:</strong> <%= @team.name %>
@@ -53,43 +54,40 @@
 		<br>
 		<br>
 	</header>
-	<article>	
-		<div class="container">
-			<br>
-			<br>
-			<br>
-			<br>
-			<div class="row">
-				<div class="column">
-					<h2>Users in team:</h2>
-					<table class="table table-hover table-dark">
-						<tbody>
-							<% @users_team.each do |user| %>
-								<tr>
-									<td ><%= user.email %></td>
-									<td ><%= link_to "Kick from team", kick_user_path(:team_id => @team.id, :user_id => user.id), :method => :patch %></td>
-								</tr>
-							<%end%> 
-						</tbody>
-					</table>
-				</div>
-				<div style="padding-left:100px" class="column">
-					<h2>Users to add:</h2>
-					<table class="table table-hover table-dark">
-						<tbody>
-							<% @to_add.each do |user| %>
-								<tr>
-									<td ><%= user.email %></td>
-									<td ><%= link_to "Add to team", team_path(:team_id => @team.id, :user_id => user.id, :action => 1), :method => :put %></td>
-								</tr>
-							<%end%> 
-						</tbody>
-					</table>
-				</div>
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row justify-content-center">
+			<div class="col-6">
+				<h2>Users in team:</h2>
+				<table class="table table-hover table-dark">
+					<tbody>
+						<% @users_team.each do |user| %>
+							<tr>
+								<td ><%= user.email %></td>
+								<td ><%= link_to "Kick from team", kick_user_path(:team_id => @team.id, :user_id => user.id), :method => :patch %></td>
+							</tr>
+						<%end%> 
+					</tbody>
+				</table>
+			</div>
+			<div style="padding-left:80px" class="col-6">
+				<h2>Users to add:</h2>
+				<table class="table table-hover table-dark">
+					<tbody>
+						<% @to_add.each do |user| %>
+							<tr>
+								<td ><%= user.email %></td>
+								<td ><%= link_to "Add to team", team_path(:team_id => @team.id, :user_id => user.id, :action => 1), :method => :put %></td>
+							</tr>
+						<%end%> 
+					</tbody>
+				</table>
 			</div>
 		</div>
-	</article>
-	<button class="btn btn-dark"><a href="/users/panel">Back</a></button>
+	</div>
 	<!--
 	 <footer>
       <p>© 2019 Simko&Ellie All Rights Reserved</p>

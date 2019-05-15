@@ -3,6 +3,10 @@ body, html {
     margin: 0;
 }
 
+.bg{
+  background-image: url("main.jpg");
+}
+
 header {
   background-color: black;
   padding: 60px;

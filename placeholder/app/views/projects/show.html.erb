@@ -1,59 +1,24 @@
 <head>
 	<style>
-		.bg{
-		    height: 100%;
-		    width: 100%;
-		    margin: 0;
-		}
-		#title{
-			font-family: "Bender";
-	    	font-size: 50px;
-		}
-		#description{
-			font-family: "Bender";
-	    	font-size: 35px;
-		}
-		#members{
-			font-family: "Bender";
-	    	font-size: 35px;
-		}
-		h2{
-			font-family: "Bender";
-	    	font-size: 35px;
-		}
-		.modal-title{
-		    color: black;
-		    font-size: 40px;
-		    font-family: "Bender";
-	  	}
-	  	.modal-body{
-	  		color: black;
-		    font-size: 30px;
-		    font-family: "Bender";
-	  	}
-	  	button{
-		    font-family: "Bender";
-	  	}
-	  	footer {
-			background-color: black;
-			padding: 10px;
-			text-align: center;
-			color: white;
-			font-family: "Bender";
-		}
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <%= stylesheet_link_tag "project_show.css", :media => "all" %>
+	    <%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
 	</style>
 </head>
-<body class="bg">
+<body class="bg" style="font-family: Bender">
 	<header style="background-color: black">
+		<a href="/users/panel" class="previous round">&#8249;</a>
+		<br>
 		<div class="row">
-			<div style="color: #c4b28f" id="title" class="col text-center">
-				<strong >Project:</strong> <%= @project.title %>
+			<div class="col text-center" style="color: #c4b28f; font-size: 50px">
+				<strong id="title">Project:</strong> <%= @project.title %>
 			</div>
 		</div>
 		<br>
 		<br>
 		<div class="row">
-			<div id="description" class="col-lg text-center">
+			<div id="description" class="col-lg text-center" style="color: #c4b28f">
 				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#dsc">
 					Project description
 				</button>
@@ -61,7 +26,7 @@
 				    <%= @project.description %>
 				</div>
 			</div>
-			<div id="members" class="col-lg text-center">
+			<div id="members" class="col-lg text-center" style="color: #c4b28f">
 				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#users">
 					Project members
 				</button>
@@ -79,13 +44,13 @@
 		<br>
 		<br>
 		<div class="row">
-			<div class="column">
+			<div class="col-6 col-md-4">
 				<h2>Tasks to do:</h2>
 				<table class="table table-hover table-dark">
 					<tbody>
 						<% @tasks.each do |task| %>
 							<tr>
-								<td ><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
+								<td bgcolor="#edd6a7"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
 								<div id="info" class="modal">
 									<div class="modal-dialog">
 						       			<div class="modal-content">
@@ -140,5 +105,4 @@
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-dark"><a href="/users/panel">Back</a></button>
 </body>

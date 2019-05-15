@@ -11,7 +11,8 @@ header {
   color: white;
 }
 .bg{
-    background-color: #edd6a7;
+    background-image: url("main.jpg");
+  
 }
 footer {
   background-color: black;

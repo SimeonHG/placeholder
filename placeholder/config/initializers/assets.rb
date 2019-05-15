@@ -6,6 +6,7 @@ Rails.application.config.assets.precompile += %w( login_css.css )
 Rails.application.config.assets.precompile += %w( nachalna_css.css )
 Rails.application.config.assets.precompile += %w( signup_css.css )
 Rails.application.config.assets.precompile += %w( user_page.css )
+Rails.application.config.assets.precompile += %w( project_show.css )
 
 
 # Add additional assets to the asset load path.
