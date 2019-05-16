@@ -8,18 +8,18 @@ body, html {
 }
 
 header {
-  background-color: black;
+  background-color: #1f2833;
   padding: 60px;
   text-align: center;
   font-size: 35px;
-  color: white;
+  color: #66fcf1;
 }
 
 footer {
   background-color: black;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #66fcf1;
   font-family: "Bender";
 }
 
@@ -31,21 +31,6 @@ nav{
   background-color: #a6a6a6;
   border-color: black;
   padding: 0px 60px
-}
-
-.previous{
-  display: inline-block;
-    padding: 8px 16px;
-    color:#A66500;
-}
-
-a:hover{
-  background-color: #ddd;
-    color: black;
-}
-
-.round {
-  border-radius: 50%;
 }
 
 .bg {
@@ -67,7 +52,7 @@ li{
 }
 
 li input{
-  border: 5px solid  black;
+  border: 5px solid #66fcf1;
   border-radius: 8px;
 }
 
@@ -78,7 +63,7 @@ li input{
 
 .typewriter h1 {
   font-size: 60px;
-  color: white;
+  color: #66fcf1;
   font-family: "Bender";
   overflow: hidden;
   border-right: .15em solid black;
@@ -96,6 +81,6 @@ li input{
 }
 
 @keyframes blink-caret {
-  from, to { border-color: black}
-  45% { border-color: black }
+  from, to { border-color: #1f2833}
+  45% { border-color: #1f2833}
 }

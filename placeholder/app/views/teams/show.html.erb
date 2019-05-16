@@ -1,9 +1,15 @@
 <head>
 	<style>
-		body, html {
+		body{
 		    height: 100%;
 		    width: 100%;
 		    margin: 0;
+		}
+		.row{
+			width: 100%;
+		}
+		.container{
+			height: 80vh;
 		}
 		#title{
 			font-family: "Bender";
@@ -18,6 +24,7 @@
 	    	font-size: 35px;
 		}
 		h2{
+			color: #66fcf1;
 			font-family: "Bender";
 	    	font-size: 35px;
 		}
@@ -38,16 +45,16 @@
 		  background-color: black;
 		  padding: 10px;
 		  text-align: center;
-		  color: white;
+		  color: #66fcf1;
 		  font-family: "Bender";
 		}
 	</style>
 </head>
-<body class="bg">
-	<header style="background-color: black">
+<body class="bg" style="background-color: #0b0c10">
+	<header style="background-color: #1f2833">
 		<a href="/users/panel" class="previous round">&#8249;</a>
 		<div class="row">
-			<div style="color: #c4b28f" id="title" class="col text-center">
+			<div style="color: #66fcf1" id="title" class="col text-center">
 				<strong >Team:</strong> <%= @team.name %>
 			</div>
 		</div>
@@ -63,11 +70,11 @@
 			<div class="col-6">
 				<h2>Users in team:</h2>
 				<table class="table table-hover table-dark">
-					<tbody>
+					<tbody bgcolor="#c5c6c7">
 						<% @users_team.each do |user| %>
 							<tr>
-								<td ><%= user.email %></td>
-								<td ><%= link_to "Kick from team", kick_user_path(:team_id => @team.id, :user_id => user.id), :method => :patch %></td>
+								<td style="color: #1f2833"><%= user.email %></td>
+								<td><%= link_to "Kick from team", kick_user_path(:team_id => @team.id, :user_id => user.id), :method => :patch %></td>
 							</tr>
 						<%end%> 
 					</tbody>
@@ -76,11 +83,11 @@
 			<div style="padding-left:80px" class="col-6">
 				<h2>Users to add:</h2>
 				<table class="table table-hover table-dark">
-					<tbody>
+					<tbody bgcolor="#c5c6c7"	>
 						<% @to_add.each do |user| %>
 							<tr>
-								<td ><%= user.email %></td>
-								<td ><%= link_to "Add to team", team_path(:team_id => @team.id, :user_id => user.id, :action => 1), :method => :put %></td>
+								<td style="color: #1f2833"><%= user.email %></td>
+								<td><%= link_to "Add to team", team_path(:team_id => @team.id, :user_id => user.id, :action => 1), :method => :put %></td>
 							</tr>
 						<%end%> 
 					</tbody>
@@ -88,9 +95,7 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	 <footer>
+	<footer>
       <p>© 2019 Simko&Ellie All Rights Reserved</p>
     </footer>
--->
 </body>

@@ -6,28 +6,28 @@
 	    <%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
 	</style>
 </head>
-<body class="bg" style="font-family: Bender">
-	<header style="background-color: black">
+<body class="bg" style="font-family: Bender; background-color: #0b0c10">
+	<header style="background-color: #1f2833">
 		<a href="/users/panel" class="previous round">&#8249;</a>
 		<br>
 		<div class="row">
-			<div class="col text-center" style="color: #c4b28f; font-size: 50px">
+			<div class="col text-center" style="color: #66fcf1; font-size: 50px">
 				<strong id="title">Project:</strong> <%= @project.title %>
 			</div>
 		</div>
 		<br>
 		<br>
 		<div class="row">
-			<div id="description" class="col-lg text-center" style="color: #c4b28f">
-				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#dsc">
+			<div id="description" class="col-lg text-center" style="color: #66fcf1">
+				<button style="color: #66fcf1" bgcolor="#0b0c10" type="button"class="btn" data-toggle="collapse" data-target="#dsc">
 					Project description
 				</button>
 				<div id="dsc" class="collapse">
 				    <%= @project.description %>
 				</div>
 			</div>
-			<div id="members" class="col-lg text-center" style="color: #c4b28f">
-				<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#users">
+			<div id="members" class="col-lg text-center" style="color: #66fcf1">
+				<button style="color: #66fcf1" bgcolor="#0b0c10" type="button" class="btn" data-toggle="collapse" data-target="#users">
 					Project members
 				</button>
 				<div id="users" class="collapse">
@@ -45,12 +45,12 @@
 		<br>
 		<div class="row">
 			<div class="col-6 col-md-4">
-				<h2>Tasks to do:</h2>
+				<h2 style="color: #66fcf1">Tasks to do:</h2>
 				<table class="table table-hover table-dark">
 					<tbody>
 						<% @tasks.each do |task| %>
 							<tr>
-								<td bgcolor="#edd6a7"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
+								<td bgcolor="#c5c6c7"><button bgcolor="#0b0c10" type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
 								<div id="info" class="modal">
 									<div class="modal-dialog">
 						       			<div class="modal-content">
@@ -74,7 +74,7 @@
 						<%end%> 
 					</tbody>
 				</table>
-			<button  type="button" class="btn btn-light" data-toggle="modal" data-target="#task">Create task</button>
+			<button style="color: #66fcf1" bgcolor="#0b0c10" type="button" class="btn" data-toggle="modal" data-target="#task">Create task</button>
 			<div id="task" class="modal fade" role="dialog">
 	          <div class="modal-dialog modal-lg">
 	           <div class="modal-content">
@@ -89,14 +89,14 @@
 	        </div> 
 		</div>
 			<div style="padding-left:100px" class="column">
-				<h2>Tasks in progress:</h2>
+				<h2 style="color: #66fcf1">Tasks in progress:</h2>
 				<table class="table table-hover table-dark">
 					<tbody>
 					</tbody>
 				</table>
 			</div>
 			<div style="padding-left:100px" class="column">
-				<h2>Finished tasks:</h2>
+				<h2 style="color: #66fcf1">Finished tasks:</h2>
 				<table class="table table-hover table-dark">
 					<tbody>
 

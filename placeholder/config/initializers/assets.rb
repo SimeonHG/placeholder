@@ -7,7 +7,7 @@ Rails.application.config.assets.precompile += %w( nachalna_css.css )
 Rails.application.config.assets.precompile += %w( signup_css.css )
 Rails.application.config.assets.precompile += %w( user_page.css )
 Rails.application.config.assets.precompile += %w( project_show.css )
-
+Rails.application.config.assets.precompile += %w( switch.js )										
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path

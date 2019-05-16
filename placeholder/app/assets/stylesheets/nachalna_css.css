@@ -7,7 +7,7 @@ footer {
   background-color: black;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #66fcf1;
   font-family: "Bender";
 }
 
@@ -17,20 +17,22 @@ nav{
 }
 
 .jumbotron{
-  color: rgba(0, 0, 0, 1);
+  color: #66fcf1;
+  background-color: #c5c6c7;
   opacity: 0.8;
 }
 
 .bg {
   background-image: url("main.jpg");
   height: 100%; 
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .text-center{
-  color: #E6E3DD;
+  color: #66fcf1;
   font-family: "Bender";
   font-size: 100px;
 }
@@ -48,7 +50,12 @@ nav{
 
 .title{
   font-size: 30px;
-  color: black;
+  color: #1f2833;
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 971px) and (max-width: 1920px) {
@@ -94,20 +101,20 @@ nav{
   #card1:hover #text1 {
     display:block;
     font-size: 20px;
-    color: #A66500;
+    color: #66fcf1;
     text-align: center;
   }
 
   #card2:hover #text2{
     display:block;
      font-size: 20px;
-     color: #A66500;
+     color: #66fcf1;
     text-align: center;
   }
   #card3:hover #text3{
     display:block;
      font-size: 20px;
-     color: #A66500;
+     color: #66fcf1;
     text-align: center;
   }  
 }

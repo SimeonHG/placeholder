@@ -1,15 +1,39 @@
 body, html {
-  background-color: black;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+  background-color: #0b0c10;
+  height: 100%;
+  width: 100%;
+  margin: 0;
   }
 
 /* PC */
 @media (min-width: 971px) and (max-width: 1920px) 
  { 
+  $dark-color: #111;
+  $light-color: #eee;
+  switch.dark-mode {
+    background-color: $dark-color;
+    color: $light-color;
+    a {
+      color: $dark-color;
+    }
+    button{
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
+  switch.light-mode {
+    background-color: $light-color;
+    color: $dark-color;
+    a{
+      color: $dark-color;
+    }
+    button{
+      background-color: $dark-color;
+      color: $light-color;
+    }
+  }
   .hero-image{
-    background-image: url("main.jpg");
+    background-color: #1f2833;
     height: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,15 +47,6 @@ body, html {
       color: white;
       font-family: "Bender";
     }
-  .sidebar{
-    background-color: white;
-    height: 100%;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    position: fixed;
-  }
  .text-center{
     color: black;
     font-family: "Bender";
@@ -39,7 +54,7 @@ body, html {
   }
   h1{
     font-size: 70px;
-
+    color: #66fcf1;
   }
   .btn{
     font-family: "Bender";
@@ -56,7 +71,6 @@ body, html {
   }
 
   .navbar-brand{
-    color: #E6E3DD;
     font-family: "Bender";
   }
   .modal-body{
