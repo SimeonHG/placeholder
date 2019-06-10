@@ -12,7 +12,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "index should be found" do
-   # project = projects(:one)
+   
     get "/projects#index"
     assert_response :found
   end
