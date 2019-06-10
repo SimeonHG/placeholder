@@ -46,34 +46,23 @@
 		<div class="row">
 			<div class="col-6 col-md-4">
 				<h2 style="color: #66fcf1">Tasks to do:</h2>
-				<table class="table table-hover table-dark">
-					<tbody>
 						<% @tasks.each do |task| %>
-							<tr>
-								<td bgcolor="#c5c6c7"><button bgcolor="#0b0c10" type="button" class="btn btn-dark" data-toggle="modal" data-target="#info"><%= task.name %></button></td>
-								<div id="info" class="modal">
-									<div class="modal-dialog">
-						       			<div class="modal-content">
-						       				<div class="modal-header">
-							                	<strong><h2>Task info</h2></strong>
-							                </div>
-							         		<div class="modal-body">
-							         			<strong>Description: </strong>
-							         				<%= task.description %><br>
-							         			<strong>State: </strong>
-							         				<%= task.state %><br>
-							         			<strong>Priority: </strong>
-							         				<%= task.priority %><br>
-							         			<strong>Deadline: </strong>
-							         				<%= task.deadline %><br>
-							         		</div>
-							            </div>
-						           	</div>
-						        </div> 
-							</tr>
+						<div class="card">
+							<h5 class="card-header primary-color white-text"><%= task.name %></h5>
+					      	<div class="card-body">
+					        <p class="card-text">
+					        	<strong>Description: </strong>
+							    <%= task.description %><br>
+							    <strong>State: </strong>
+							    <%= task.state %><br>
+							    <strong>Priority: </strong>
+							    <%= task.priority %><br>
+							    <strong>Deadline: </strong>
+							    <%= task.deadline %><br></p>
+					      	</div>
+					    </div>
+					    <br>
 						<%end%> 
-					</tbody>
-				</table>
 			<button style="color: #66fcf1" bgcolor="#0b0c10" type="button" class="btn" data-toggle="modal" data-target="#task">Create task</button>
 			<div id="task" class="modal fade" role="dialog">
 	          <div class="modal-dialog modal-lg">

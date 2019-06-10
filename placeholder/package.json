@@ -1,5 +1,7 @@
 {
   "name": "placeholder",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "tablednd": "^1.0.3"
+  }
 }

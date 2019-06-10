@@ -65,9 +65,9 @@ li input{
   font-size: 60px;
   color: #66fcf1;
   font-family: "Bender";
-  overflow: hidden;
+  overflow: hidden; 
   border-right: .15em solid black;
-  white-space: nowrap;
+  white-space: nowrap; /* on one line */
   margin: 0 auto;
   letter-spacing: .15em;
   animation: 
