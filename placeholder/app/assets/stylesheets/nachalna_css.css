@@ -60,7 +60,7 @@ nav{
 
 @media (min-width: 971px) and (max-width: 1920px) {
   .card{
-  background-color: rgb(255,255,255,0.6);
+  background-color: rgb(255,255,255);
   border-radius: 5px;
   margin-right: 5px;
   width: 320px;
@@ -121,7 +121,7 @@ nav{
 
 @media (min-width: 750px) and (max-width: 970px) {
   .card{
-  background-color: rgb(255,255,255,0.4);
+  background-color: rgb(255,255,255);
   border-radius: 5px;
   margin-bottom: 10px;
   width: 800px;
