@@ -21,6 +21,10 @@ class TasksController < ApplicationController
 
 	end
 	
+	def destroy
+		@task.destroy
+	end
+	
 	private
 
 		def set_project

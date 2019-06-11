@@ -19,10 +19,6 @@ a:hover{
   border-radius: 50%;
 }
 
-table{
-	border-collapse: collapse;
-	border: 2px;
-}
 #description{
 	font-family: "Bender";
 	font-size: 35px;
@@ -35,6 +31,7 @@ h2{
 	font-family: "Bender";
 	font-size: 35px;
 }
+
 .modal-title{
 	color: black;
 	font-size: 40px;
@@ -55,3 +52,5 @@ footer {
 	color: #66fcf1;
 	font-family: "Bender";
 }
+
+
