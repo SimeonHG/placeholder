@@ -1,44 +1,11 @@
 <head>
 	<style>
 		<meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <%= stylesheet_link_tag "project_show.css", :media => "all" %>
-	    <%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<%= stylesheet_link_tag "project_show.css", :media => "all" %>
+		<%= javascript_tag ('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css') %>
 	</style>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="../node_modules/table-dragger/dist/table-dragger.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		 	$('li').bind('dragstart', function(event) {
-		    	event.originalEvent.dataTransfer.setData("text/plain",  event.target.getAttribute('id'));
-			});
-
-			$('ul').bind('dragover', function(event) {
-			    event.preventDefault();
-			});
-
-			$('ul').bind('dragenter', function(event) {
-			    $(this).addClass("over");
-			});
-
-			  $('ul').bind('dragleave drop', function(event) {
-			    $(this).removeClass("over");
-			  });
-
-			  $('li').bind('drop', function(event) {
-			    return false;
-			  });
-
-			  $('ul').bind('drop', function(event) {
-			    var listitem = event.originalEvent.dataTransfer.getData("text/plain");
-			    event.target.appendChild(document.getElementByClass(listitem));
-			    event.preventDefault();
-			  });
-		});
-	</script>
+	<link rel="stylesheet" href="~/css/kanban.css" />
 </head>
 <body class="bg" style="font-family: Bender; background-color: #0b0c10">
 	<header style="background-color: #1f2833">
@@ -51,13 +18,13 @@
 		</div>
 		<br>
 		<br>
-		<div class="row">
+		<d iv class="row">
 			<div id="description" class="col-lg text-center" style="color: #66fcf1">
 				<button style="color: #66fcf1" bgcolor="#0b0c10" type="button"class="btn" data-toggle="collapse" data-target="#dsc">
 					Project description
 				</button>
 				<div id="dsc" class="collapse">
-				    <%= @project.description %>
+					<%= @project.description %>
 				</div>
 			</div>
 			<div id="members" class="col-lg text-center" style="color: #66fcf1">
@@ -65,7 +32,7 @@
 					Project members
 				</button>
 				<div id="users" class="collapse">
-				    tuk sa member-ite
+					tuk sa member-ite
 				</div>
 			</div>
 		</div>
@@ -77,51 +44,82 @@
 		<br>
 		<br>
 		<br>
-		<div class="row" id="board">
-			<div class="col-6 col-md-4 handle">
-				<h2 style="color: #66fcf1">Tasks to do:</h2>
-					<ul id="todo">
-						<% @tasks.each do |task| %>
-						<li class="panel" draggable="true">
-						<div class="card heading">
-							<h5 class="card-header primary-color white-text"><%= task.name %></h5>
-					      	<div class="card-body">
-					        <p class="card-text">
-					        	<strong>Description: </strong>
-							    <%= task.description %><br>
-							    <strong>Priority: </strong>
-							    <%= task.priority %><br>
-							    <strong>Deadline: </strong>
-							    <%= task.deadline %><br></p>
-					      	</div>
-					    </div>
-					    <br>
-						<%end%> 
-					</ul>
-				<button style="color: #66fcf1" bgcolor="#0b0c10" type="button" class="btn" data-toggle="modal" data-target="#task">Create task</button>
-				<div id="task" class="modal fade" role="dialog">
-		          <div class="modal-dialog modal-lg">
-		           <div class="modal-content">
-		              <div class="modal-header">
-		                <h4 class="modal-title">New Task</h4>
-		              </div>
-		              <div class="modal-body">
-		                <%= render 'tasks/form', project: @project%>  
-		              </div>
-		            </div>
-		          </div>
-		        </div> 
-			</div>
-			<div style="padding-left:100px" class="col-6 col-md-4 handle">
-				<h2 style="color: #66fcf1">Tasks in progress:</h2>
-				<ul id="inprogress">
-				</ul>
-			</div>
-			<div style="padding-left:100px" class="col-6 col-md-4 handle">
-				<h2 style="color: #66fcf1">Finished tasks:</h2>
-				<ul id="done">
-				</ul>
+		<div>
+			<div id="kaban">
+			  <div id="scroller">
+				<div id="boards" class="row">
+				  <div class="board col-6 col-md-4 handle" id="board1" >
+					<h2 style="color: #66fcf1">Tasks to do:</h2>
+					<div class="cards" id="b1">
+							<% @tasks.each do |task| %>
+								<div class="card">
+									<span class="cardtitle noselect">
+									
+										<div class="card heading">
+											<h5 class="card-header primary-color white-text"><%= task.name %></h5>
+											<div class="card-body">
+											<p class="card-text">
+												<strong>Description: </strong>
+												<%= task.description %><br>
+												<strong>Priority: </strong>
+												<%= task.priority %><br>
+												<strong>Deadline: </strong>
+												<%= task.deadline %><br></p>
+											</div>
+										</div>
+										
+									</span>
+								</div>
+							<%end%>
+							<button style="color: #66fcf1" bgcolor="#0b0c10" type="button" class="btn" data-toggle="modal" data-target="#task">Create task</button>
+							<div id="task" class="modal fade" role="dialog">
+							  <div class="modal-dialog modal-lg">
+							   <div class="modal-content">
+								  <div class="modal-header">
+									<h4 class="modal-title">New Task</h4>
+								  </div>
+								  <div class="modal-body">
+									<%= render 'tasks/form', project: @project%>  
+								  </div>
+								</div>
+							  </div>
+					  		</div>
+					</div>
+				  </div>
+				  <div class="board col-6 col-md-4 handle" id="board2">
+					<h2 style="color: #66fcf1">Tasks in progress:</h2>
+					<div class="cards" id="b2">
+						<div class="card test" style="opacity: 0"><span class="cardtitle noselect">A great card #5</span></div>
+					</div>
+				  </div>
+				  
+				  <div class="board col-6 col-md-4 handle" id="board3">
+					<h2 style="color: #66fcf1">Tasks done:</h2>
+					<div class="cards" id="b3">
+						<div class="card test" style="opacity: 0"><span class="cardtitle noselect">A great card #5</span></div>
+					</div>
+				  </div>
+				</div>
+			  </div>
 			</div>
 		</div>
 	</div>
 </body>
+<script>
+		dragula([
+			document.getElementById('b1'),
+			document.getElementById('b2'),
+			document.getElementById('b3')
+		]);
+
+		var element = document.getElementById("boards"); // Count Boards
+		var numberOfBoards = element.getElementsByClassName('board').length;
+		var boardsWidth = numberOfBoards*316 // Width of all Boards
+		console.log(boardsWidth);
+		element.style.width = boardsWidth+"px"; // set Width
+
+		// disable text-selection
+		function disableselect(e) {return false;}
+		document.onselectstart = new Function ()
+		document.onmousedown = disableselect
+	</script>

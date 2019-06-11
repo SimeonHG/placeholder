@@ -87,6 +87,8 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dragula-rails (3.7.0)
+      railties (>= 3.1)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.10.0)
@@ -235,6 +237,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  dragula-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
